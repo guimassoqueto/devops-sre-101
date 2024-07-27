@@ -41,7 +41,7 @@ kubectl describe ingress argocd-server-http-ingress -n argocd
 - Recuperando a senha inicial
 
 ```
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+argocd admin initial-password -n argocd
 ```
 
 - Acesse via browser
